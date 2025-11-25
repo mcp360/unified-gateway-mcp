@@ -1,6 +1,10 @@
 # MCP360: Unified MCP Gateway
 
-Access all MCP servers through a unified platform. MCP360 provides unified access to 100+ MCP tools from the Marketplace + Custom MCP support allowing you to discover and execute tools from any connected MCP server.
+[![npm version](https://badge.fury.io/js/@mcp360ai%2Funified-gateway.svg)](https://www.npmjs.com/package/@mcp360ai/unified-gateway)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
+
+Access all MCP servers through a single unified gateway. MCP360 provides seamless access to 100+ MCP tools from the Marketplace plus support for your custom MCPs, allowing you to discover and execute tools from any connected MCP server through one simple interface.
 
 ## Features
 
@@ -8,19 +12,39 @@ Access all MCP servers through a unified platform. MCP360 provides unified acces
 - 🌐 **Universal Access** - Single gateway to marketplace MCPs and your custom MCPs
 - 🔐 **Secure** - API key authentication
 - 📦 **Easy Setup** - Works with Claude Desktop and any MCP-compatible client
+- ⚡ **Fast** - Instant tool discovery and execution
+- 🔌 **Extensible** - Add unlimited custom MCP servers
+
+## Quick Example
+
+Once configured, you can interact with all your MCP tools through natural language:
+
+```
+You: "Search for email tools"
+→ Returns: verify_email, send_email, email_validator...
+
+You: "Execute verify_email with email test@example.com"
+→ Returns: Email validation results
+
+You: "Find cryptocurrency tools"
+→ Returns: get_crypto_price, crypto_market_data...
+
+You: "Get Bitcoin price"
+→ Returns: Current BTC price and market data
+```
 
 ## Installation
 
 ### Global Installation (Recommended)
 
 ```bash
-npm install -g @mcp360/universal-gateway
+npm install -g @mcp360ai/unified-gateway
 ```
 
 ### Local Installation
 
 ```bash
-npm install @mcp360/universal-gateway
+npm install @mcp360ai/unified-gateway
 ```
 
 ## Quick Start
@@ -43,7 +67,7 @@ Edit your Claude Desktop config file:
   "mcpServers": {
     "mcp360": {
       "command": "npx",
-      "args": ["@mcp360/universal-gateway"],
+      "args": ["@mcp360ai/unified-gateway"],
       "env": {
         "MCP360_API_KEY": "your_api_key_here"
       }
@@ -174,7 +198,7 @@ npm run type-check
 ```
 Claude Desktop
       ↓
-@mcp360/universal-gateway (this package)
+@mcp360ai/unified-gateway (this package)
       ↓
 MCP360 Universal Gateway API
       ↓
@@ -227,7 +251,7 @@ For detailed API documentation, visit: [help.mcp360.ai](https://mcp360.ai/docs)
 ## Support
 
 - 📚 Documentation: [help.mcp360.ai](https://mcp360.ai/docs)
-- 🐛 Issues: [github.com/mcp360/universal-gateway/issues](https://github.com/mcp360/universal-gateway/issues)
+- 🐛 Issues: [github.com/mcp360/Unified-Gateway-MCP/issues](https://github.com/mcp360/Unified-Gateway-MCP/issues)
 - 📧 Email: support@mcp360.ai
 - 💬 Discord: [discord.gg/mcp360](https://discord.gg/mcp360)
 

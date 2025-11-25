@@ -1,7 +1,7 @@
 {
-  "name": "@mcp360/universal-gateway",
+  "name": "@mcp360ai/unified-gateway",
   "version": "1.0.0",
-  "description": "MCP360 Universal Gateway - Access all MCP servers through a single unified interface with search and execute capabilities",
+  "description": "MCP360 Unified Gateway - Access all MCP servers through a single unified interface with search and execute capabilities",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
@@ -20,18 +20,22 @@
     "model-context-protocol",
     "ai",
     "claude",
-    "universal-gateway",
+    "unified-gateway",
     "mcp-server",
-    "mcp-client"
+    "mcp-client",
+    "mcp-tools",
+    "mcp-tools-search",
+    "mcp-tools-execute",
+    "mcp-gateway"
   ],
   "author": "MCP360",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcp360/universal-gateway.git"
+    "url": "https://github.com/mcp360/Unified-Gateway-MCP.git"
   },
   "bugs": {
-    "url": "https://github.com/mcp360/universal-gateway/issues"
+    "url": "https://github.com/mcp360/Unified-Gateway-MCP/issues"
   },
   "homepage": "https://mcp360.com",
   "dependencies": {
