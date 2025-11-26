@@ -20,11 +20,11 @@ Access all MCP servers through a single unified gateway. MCP360 provides seamles
 Once configured, you can interact with all your MCP tools through natural language:
 
 ```
-You: "Search for email tools"
-→ Returns: verify_email, send_email, email_validator...
-
 You: "Execute verify_email with email test@example.com"
 → Returns: Email validation results
+
+You: "can you do keyword research for "AI Agent" related keywords using MCP360"
+→ Returns: Keyword research results
 
 You: "Find cryptocurrency tools"
 → Returns: get_crypto_price, crypto_market_data...
@@ -94,44 +94,7 @@ Or if installed globally:
 ### 3. Restart Claude Desktop
 
 Restart Claude Desktop to load the gateway.
-
-## Available Tools
-
-### 1. `search` - Discover Available Tools
-
-Search and discover tools across all connected MCP servers.
-
-**Parameters:**
-- `query` (optional): Search term to filter tools by name or description
-
-**Examples:**
-
-```
-User: Search for email tools
-User: Show me all available tools
-User: Find tools for SEO
-User: What tools can help with keyword research?
-```
-
-**Output:** List of matching tools with their names, descriptions, and required parameters.
-
-### 2. `execute` - Run Any Tool
-
-Execute any tool from any connected MCP server.
-
-**Parameters:**
-- `tool_name` (required): Name of the tool to execute
-- `arguments` (optional): Tool-specific parameters as an object
-
-**Examples:**
-
-```
-User: Execute the verify_email tool with email "test@example.com"
-User: Run keyword_research with keyword "AI tools"
-User: Execute get_crypto_price for Bitcoin
-```
-
-**Output:** Tool-specific results (varies by tool).
+## 
 
 ## Available MCP Services
 
@@ -152,17 +115,9 @@ All custom MCP servers you've created in your MCP360 account.
 
 ## Typical Workflow
 
-1. **Discover tools:**
+1. **Execute the tool:**
    ```
-   User: Search for email tools
-   ```
-
-2. **See what parameters are needed:**
-   The search results show tool names, descriptions, and required parameters.
-
-3. **Execute the tool:**
-   ```
-   User: Execute verify_email with email "john@example.com"
+   User: Verify email "john@example.com" is valid using MCP360
    ```
 
 ## Environment Variables
@@ -251,7 +206,7 @@ For detailed API documentation, visit: [help.mcp360.ai](https://mcp360.ai/docs)
 ## Support
 
 - 📚 Documentation: [help.mcp360.ai](https://mcp360.ai/docs)
-- 🐛 Issues: [github.com/mcp360/Unified-Gateway-MCP/issues](https://github.com/mcp360/Unified-Gateway-MCP/issues)
+- 🐛 Issues: [github.com/mcp360/unified-gateway-mcp/issues](https://github.com/mcp360/unified-gateway-mcp/issues)
 - 📧 Email: support@mcp360.ai
 - 💬 Discord: [discord.gg/mcp360](https://discord.gg/mcp360)
 
