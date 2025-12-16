@@ -8,10 +8,6 @@
 
 The MCP360 Universal Gateway provides **2 powerful meta-tools** that let you discover and execute tools from any connected MCP server - both marketplace services and your custom MCPs.
 
-## Tags
-
-`mcp` `model-context-protocol` `ai-agents` `claude` `api-gateway` `automation` `seo` `web-scraping` `email-verification` `cryptocurrency` `keyword-research` `google-trends` `workflow-automation` `no-code` `developer-tools` `unified-api`
-
 ## Features
 
 - 🔍 **Search** - Discover available tools across all connected MCP servers
@@ -332,16 +328,23 @@ The gateway:
 - Verify parameter types match what the tool expects
 - Review Claude Desktop logs for detailed error messages
 
-## API Reference
+## Resources
 
-For detailed API documentation, visit: [docs.mcp360.com](https://docs.mcp360.com)
+### Tutorials & Guides
+
+- [Building a Smart Amazon Price Drop Alert with n8n](https://dev.to/ankur_saini_15d4f46b01601/i-built-a-smart-amazon-price-drop-alert-using-n8n-1l44) - Learn how to create automated price tracking workflows
+- [Video: Getting Started with MCP360](https://youtu.be/_ATqVSwubW4?si=KizJaFigHOcWgiag) - Complete setup walkthrough
+- [Video: Advanced MCP360 Features](https://youtu.be/7y8lzoaI_04?si=kixfcGBro7VN4itl) - Deep dive into advanced capabilities
+
+### Documentation
+
+- [Help Center](https://help.mcp360.ai/) - Comprehensive documentation and FAQs
 
 ## Support
 
-- 📚 Documentation: [docs.mcp360.com](https://docs.mcp360.com)
+- 📚 Documentation: [help.mcp360.ai](https://help.mcp360.ai/)
 - 🐛 Issues: [github.com/mcp360/universal-gateway/issues](https://github.com/mcp360/universal-gateway/issues)
 - 📧 Email: support@mcp360.com
-- 💬 Discord: [discord.gg/mcp360](https://discord.gg/mcp360)
 
 ## License
 
