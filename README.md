@@ -1,61 +1,39 @@
-# MCP360: Unified MCP Gateway
+# MCP360 Universal Gateway
 
-[![npm version](https://badge.fury.io/js/@mcp360ai%2Funified-gateway.svg)](https://www.npmjs.com/package/@mcp360ai/unified-gateway)
+[![npm version](https://badge.fury.io/js/@mcp360%2Funiversal-gateway.svg)](https://www.npmjs.com/package/@mcp360/universal-gateway)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
 
-Access all MCP servers through a single unified gateway. MCP360 provides seamless access to 100+ MCP tools from the Marketplace plus support for your custom MCPs, allowing you to discover and execute tools from any connected MCP server through one simple interface.
+> **Access 100+ MCP tools through a single unified interface. Transform days of API integration into a 2-minute setup.**
+
+The MCP360 Universal Gateway provides **2 powerful meta-tools** that let you discover and execute tools from any connected MCP server - both marketplace services and your custom MCPs.
+
+## Tags
+
+`mcp` `model-context-protocol` `ai-agents` `claude` `api-gateway` `automation` `seo` `web-scraping` `email-verification` `cryptocurrency` `keyword-research` `google-trends` `workflow-automation` `no-code` `developer-tools` `unified-api`
 
 ## Features
 
-- 🔍 **Search & Execute** - Check available tools across all connected MCP servers and execute them dynamically
+- 🔍 **Search** - Discover available tools across all connected MCP servers
+- ⚡ **Execute** - Run any tool from any MCP server dynamically
 - 🌐 **Universal Access** - Single gateway to marketplace MCPs and your custom MCPs
 - 🔐 **Secure** - API key authentication
 - 📦 **Easy Setup** - Works with Claude Desktop and any MCP-compatible client
-- ⚡ **Fast** - Instant tool discovery and execution
-- 🔌 **Extensible** - Add unlimited custom MCP servers
-
-## Quick Example
-
-Once configured, you can interact with all your MCP tools through natural language:
-
-```
-You: "Execute verify_email with email test@example.com"
-→ Returns: Email validation results
-
-You: "can you do keyword research for "AI Agent" related keywords using MCP360"
-→ Returns: Keyword research results
-
-You: "Find cryptocurrency tools"
-→ Returns: get_crypto_price, crypto_market_data...
-
-You: "Get Bitcoin price"
-→ Returns: Current BTC price and market data
-```
 
 ## Installation
 
-### Global Installation (Recommended)
+### Get Your API Key
 
-```bash
-npm install -g @mcp360ai/unified-gateway
-```
-
-### Local Installation
-
-```bash
-npm install @mcp360ai/unified-gateway
-```
-
-## Quick Start
-
-### 1. Get Your API Key
-
-1. Sign up at [mcp360.ai](https://mcp360.ai)
+1. Sign up at [mcp360.com](https://mcp360.com)
 2. Navigate to Settings → API Keys
 3. Generate a new API key
 
-### 2. Configure Claude Desktop
+### Quick Setup
+
+Choose your preferred platform:
+
+<details>
+<summary><strong>Claude Desktop</strong></summary>
 
 Edit your Claude Desktop config file:
 
@@ -67,7 +45,7 @@ Edit your Claude Desktop config file:
   "mcpServers": {
     "mcp360": {
       "command": "npx",
-      "args": ["@mcp360ai/unified-gateway"],
+      "args": ["-y", "@mcp360/universal-gateway"],
       "env": {
         "MCP360_API_KEY": "your_api_key_here"
       }
@@ -76,7 +54,121 @@ Edit your Claude Desktop config file:
 }
 ```
 
-Or if installed globally:
+Restart Claude Desktop to load the gateway.
+
+</details>
+
+<details>
+<summary><strong>Cursor</strong></summary>
+
+1. Open Cursor Settings (`Cmd/Ctrl + Shift + J`)
+2. Go to **MCP** section
+3. Add new server configuration:
+
+```json
+{
+  "mcpServers": {
+    "mcp360": {
+      "command": "npx",
+      "args": ["-y", "@mcp360/universal-gateway"],
+      "env": {
+        "MCP360_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+Restart Cursor to activate the gateway.
+
+</details>
+
+<details>
+<summary><strong>Claude Code</strong></summary>
+
+Add to your MCP settings file:
+
+**macOS/Linux**: `~/.config/claude-code/mcp_settings.json`
+**Windows**: `%APPDATA%\claude-code\mcp_settings.json`
+
+```json
+{
+  "mcpServers": {
+    "mcp360": {
+      "command": "npx",
+      "args": ["-y", "@mcp360/universal-gateway"],
+      "env": {
+        "MCP360_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+Restart Claude Code to load the gateway.
+
+</details>
+
+<details>
+<summary><strong>Windsurf</strong></summary>
+
+Edit Windsurf MCP config:
+
+**macOS**: `~/Library/Application Support/Windsurf/mcp_config.json`
+**Windows**: `%APPDATA%\Windsurf\mcp_config.json`
+
+```json
+{
+  "mcpServers": {
+    "mcp360": {
+      "command": "npx",
+      "args": ["-y", "@mcp360/universal-gateway"],
+      "env": {
+        "MCP360_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+Restart Windsurf to activate the gateway.
+
+</details>
+
+<details>
+<summary><strong>VS Code (Cline Extension)</strong></summary>
+
+1. Install the [Cline extension](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)
+2. Open Cline settings
+3. Add MCP server configuration:
+
+```json
+{
+  "mcpServers": {
+    "mcp360": {
+      "command": "npx",
+      "args": ["-y", "@mcp360/universal-gateway"],
+      "env": {
+        "MCP360_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}
+```
+
+Reload VS Code to activate the gateway.
+
+</details>
+
+### Alternative: Global Installation
+
+For faster startup, install globally:
+
+```bash
+npm install -g @mcp360/universal-gateway
+```
+
+Then use `mcp360-gateway` as the command:
 
 ```json
 {
@@ -91,10 +183,43 @@ Or if installed globally:
 }
 ```
 
-### 3. Restart Claude Desktop
+## Available Tools
 
-Restart Claude Desktop to load the gateway.
-## 
+### 1. `search` - Discover Available Tools
+
+Search and discover tools across all connected MCP servers.
+
+**Parameters:**
+- `query` (optional): Search term to filter tools by name or description
+
+**Examples:**
+
+```
+User: Search for email tools
+User: Show me all available tools
+User: Find tools for SEO
+User: What tools can help with keyword research?
+```
+
+**Output:** List of matching tools with their names, descriptions, and required parameters.
+
+### 2. `execute` - Run Any Tool
+
+Execute any tool from any connected MCP server.
+
+**Parameters:**
+- `tool_name` (required): Name of the tool to execute
+- `arguments` (optional): Tool-specific parameters as an object
+
+**Examples:**
+
+```
+User: Execute the verify_email tool with email "test@example.com"
+User: Run keyword_research with keyword "AI tools"
+User: Execute get_crypto_price for Bitcoin
+```
+
+**Output:** Tool-specific results (varies by tool).
 
 ## Available MCP Services
 
@@ -115,9 +240,17 @@ All custom MCP servers you've created in your MCP360 account.
 
 ## Typical Workflow
 
-1. **Execute the tool:**
+1. **Discover tools:**
    ```
-   User: Verify email "john@example.com" is valid using MCP360
+   User: Search for email tools
+   ```
+
+2. **See what parameters are needed:**
+   The search results show tool names, descriptions, and required parameters.
+
+3. **Execute the tool:**
+   ```
+   User: Execute verify_email with email "john@example.com"
    ```
 
 ## Environment Variables
@@ -153,7 +286,7 @@ npm run type-check
 ```
 Claude Desktop
       ↓
-@mcp360ai/unified-gateway (this package)
+@mcp360/universal-gateway (this package)
       ↓
 MCP360 Universal Gateway API
       ↓
@@ -201,13 +334,13 @@ The gateway:
 
 ## API Reference
 
-For detailed API documentation, visit: [help.mcp360.ai](https://mcp360.ai/docs)
+For detailed API documentation, visit: [docs.mcp360.com](https://docs.mcp360.com)
 
 ## Support
 
-- 📚 Documentation: [help.mcp360.ai](https://mcp360.ai/docs)
-- 🐛 Issues: [github.com/mcp360/unified-gateway-mcp/issues](https://github.com/mcp360/unified-gateway-mcp/issues)
-- 📧 Email: support@mcp360.ai
+- 📚 Documentation: [docs.mcp360.com](https://docs.mcp360.com)
+- 🐛 Issues: [github.com/mcp360/universal-gateway/issues](https://github.com/mcp360/universal-gateway/issues)
+- 📧 Email: support@mcp360.com
 - 💬 Discord: [discord.gg/mcp360](https://discord.gg/mcp360)
 
 ## License
@@ -220,4 +353,4 @@ Contributions are welcome! Please read our [contributing guidelines](CONTRIBUTIN
 
 ---
 
-Made with ❤️ by [MCP360](https://mcp360.ai)
+Made with ❤️ by [MCP360](https://mcp360.com)
