@@ -14,7 +14,7 @@
 
 ## 🎯 What is MCP360?
 
-**MCP360 is a unified MCP gateway** that gives AI agents access to **100+ external tools and sources**. You can connect your agents once and immediately run searches, research tasks, SEO workflows, and other operational actions. Instead of spending days integrating multiple APIs, connect to **100+ tools** easily with a simple setup.
+**MCP360 is a unified MCP gateway** that gives AI agents access to **100+ external tools**, including prebuilt MCPs and custom MCP servers. You can connect your agents once and immediately run searches, research tasks, SEO workflows, and other operational actions. Instead of spending days integrating multiple APIs, connect to 100+ tools easily with a simple setup, or add your own **Custom MCPs** when you need specific logic or data.
 
 ---
 
