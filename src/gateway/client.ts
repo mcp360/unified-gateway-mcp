@@ -36,14 +36,20 @@ export class GatewayClient {
   private gatewayUrl: string;
   private requestId: number = 1;
   private initialized: boolean = false;
+  private timeoutMs: number;
 
-  constructor(apiKey: string, gatewayUrl: string = 'https://connect.mcp360.ai/v1/mcp360/mcp') {
+  constructor(
+    apiKey: string,
+    gatewayUrl: string = 'https://connect.mcp360.ai/v1/mcp360/mcp',
+    timeoutMs: number = 240000 // 4 minutes default (leave buffer for 5 min limit)
+  ) {
     // Append API key as query parameter
     this.gatewayUrl = `${gatewayUrl}?token=${apiKey}`;
+    this.timeoutMs = timeoutMs;
   }
 
   /**
-   * Make a JSON-RPC 2.0 request to the gateway
+   * Make a JSON-RPC 2.0 request to the gateway with timeout
    */
   private async request(method: string, params?: any): Promise<any> {
     const requestBody: JsonRpcRequest = {
@@ -53,6 +59,10 @@ export class GatewayClient {
       params,
     };
 
+    // Create abort controller for timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), this.timeoutMs);
+
     try {
       const response = await fetch(this.gatewayUrl, {
         method: 'POST',
@@ -60,7 +70,10 @@ export class GatewayClient {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(requestBody),
+        signal: controller.signal,
       });
+
+      clearTimeout(timeoutId);
 
       if (!response.ok) {
         throw new Error(`Gateway request failed: ${response.status} ${response.statusText}`);
@@ -74,7 +87,12 @@ export class GatewayClient {
 
       return data.result;
     } catch (error) {
+      clearTimeout(timeoutId);
+
       if (error instanceof Error) {
+        if (error.name === 'AbortError') {
+          throw new Error(`Gateway request timed out after ${this.timeoutMs}ms`);
+        }
         throw new Error(`Gateway client error: ${error.message}`);
       }
       throw error;
