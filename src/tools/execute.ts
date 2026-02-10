@@ -10,21 +10,8 @@ export const executeTool = {
   }),
   handler: async (args: any, client: GatewayClient) => {
     try {
-      // Validate that tool exists
-      const tools = await client.listTools();
-      const tool = tools.find(t => t.name === args.tool_name);
-
-      if (!tool) {
-        return {
-          content: [{
-            type: 'text' as const,
-            text: `Tool "${args.tool_name}" not found. Use the "search" tool to discover available tools.`,
-          }],
-          isError: true,
-        };
-      }
-
-      // Execute the tool
+      // Execute the tool directly - let gateway handle validation
+      // This avoids fetching all 100+ tools just to check existence
       const result = await client.callTool(args.tool_name, args.arguments || {});
 
       // Format the result
