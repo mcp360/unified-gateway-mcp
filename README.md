@@ -223,6 +223,26 @@
 **Reload VS Code** to activate the gateway! 💡
 
 </details>
+<details>
+<summary><b>🤖 YourGPT</b></summary>
+<br>
+
+1. Go to your **YourGPT Dashboard**
+2. Select **Functions** from the sidebar
+3. Choose the **MCP Server** option
+4. You'll see two options:
+   - **Browse Marketplace MCP** - Select from pre-configured MCP servers
+   - **Add Custom MCP** - Add your own MCP server configuration
+
+**Use MCP360 in YourGPT:**
+- Select **Add MCP**
+- Enter the server details:
+  - **Name:** `mcp360`
+  - **URL:** `https://connect.mcp360.ai/v1/mcp360/mcp?token=YOUR_API_KEY`
+
+**Save and activate** to start using MCP360 in YourGPT! 🎉
+
+</details>
 
 ### 🚄 Pro Tip: Global Installation
 
@@ -387,69 +407,116 @@ For enterprise deployments or custom configurations:
 }
 ```
 
+## 🚀 Quick Start
+
+### Step 1: Get Your API Key (Optional)
+
+MCP360 supports **flexible authentication** to get you started quickly:
+
+<details open>
+<summary><b>🔑 Option 1: Manual API Key Setup</b></summary>
+
+<br>
+
+1. **Sign up** at [mcp360.ai](https://mcp360.ai) 🎉
+2. Navigate to **Settings → API Keys** ⚙️
+3. Click **Generate New Key** 🔑
+4. Copy your API key and add it to your configuration 📋
+
+</details>
+
+<details>
+<summary><b>🔐 Option 2: Skip API Key - Use OAuth 2.0 (Automatic Fallback)</b></summary>
+
+<br>
+
+**No API key? No problem!** Simply connect MCP360 without an API key, and our OAuth 2.0 flow will automatically activate:
+
+1. 🌐 Your browser opens to the MCP360 sign-in page
+2. 🔓 You grant permission to access your MCP360 account
+3. 📂 You select your project and API key
+4. ✅ Authentication completes seamlessly
+
+**Benefits:**
+- ⚡ Zero manual API key management
+- 🔄 Easy project switching
+- 🔒 Secure token-based authentication
+- 🎯 Granular permission control
+
+> **Note:** If you don't provide an API key in your configuration, OAuth 2.0 authentication will trigger automatically on first use.
+
+</details>
 
 ---
 
-## 🐛 Troubleshooting
+## 🔒 Enterprise-Grade Security
 
-<details>
-<summary><b>❓ Gateway Not Appearing in Claude Desktop</b></summary>
+<div align="center">
 
-<br>
+### 🛡️ Security Compliance & Certifications
 
-**Solutions:**
+MCP360 is built with enterprise security at its core, ensuring your data is protected with industry-leading standards.
 
-1. ✅ Validate your `claude_desktop_config.json` is proper JSON
-2. 🔑 Verify your API key is correct and not expired
-3. 🔄 **Completely restart** Claude Desktop (quit and reopen)
-4. 📋 Check Claude Desktop logs for detailed errors:
-   - **macOS:** `~/Library/Logs/Claude/`
-   - **Windows:** `%APPDATA%\Claude\logs\`
+</div>
 
-</details>
-
-<details>
-<summary><b>🔐 Authentication Errors</b></summary>
-
-<br>
-
-**Solutions:**
-
-1. 🔍 Verify your API key is valid at [mcp360.ai](https://mcp360.ai/settings/api-keys)
-2. ✅ Ensure you have correct permissions in your MCP360 account
-3. ⚠️ Check that the API key hasn't been revoked or expired
-4. 🔄 Try regenerating a new API key
-
-</details>
-
-<details>
-<summary><b>⚡ Tool Execution Errors</b></summary>
-
-<br>
-
-**Solutions:**
-
-1. 🔍 Use `search` first to verify the correct tool name
-2. 📋 Ensure all **required parameters** are provided
-3. 🎯 Verify parameter **types** match tool expectations
-4. 📊 Review Claude Desktop logs for detailed error messages
-5. 📖 Check tool documentation for specific requirements
-
-</details>
-
-<details>
-<summary><b>🐌 Performance Issues</b></summary>
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <img src="https://martech.org/wp-content/uploads/2018/09/GDPR-with-stars_wkhip8-600x338.png" width="60" alt="GDPR"/>
+      <br><br>
+      <b>🇪🇺 GDPR Compliant</b>
+      <br><br>
+      <sub>Full compliance with European data protection regulations</sub>
+      <br><br>
+      <sup>✓ Data Privacy</sup><br>
+      <sup>✓ User Consent</sup><br>
+      <sup>✓ Right to Delete</sup>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://swimlane.com/assets/uploads/images/AICPA-Logo.png" width="60" alt="SOC 2"/>
+      <br><br>
+      <b>🔐 SOC 2 Type II</b>
+      <br><br>
+      <sub>Rigorous security, availability, and confidentiality controls</sub>
+      <br><br>
+      <sup>✓ Security Controls</sup><br>
+      <sup>✓ Availability</sup><br>
+      <sup>✓ Confidentiality</sup>
+    </td>
+    <td align="center" width="33%">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMxnxol4MpHV9-HWuVp5mLxWWU67dFZ5PXBg&s" width="60" alt="ISO 27001"/>
+      <br><br>
+      <b>🏆 ISO 27001</b>
+      <br><br>
+      <sub>International standard for information security management</sub>
+      <br><br>
+      <sup>✓ Risk Management</sup><br>
+      <sup>✓ Asset Protection</sup><br>
+      <sup>✓ Continuous Improvement</sup>
+    </td>
+  </tr>
+</table>
 
 <br>
 
-**Solutions:**
+<div align="center">
 
-1. 🚄 Consider [global installation](#-pro-tip-global-installation) for faster startup
-2. 🌐 Check your internet connection stability
-3. 📊 Monitor MCP360 [status page](https://status.mcp360.ai)
-4. 🔄 Clear npm cache: `npm cache clean --force`
+### 🔑 Secure Authentication Options
 
-</details>
+</div>
+
+| Method | Security Level | Best For |
+|--------|----------------|----------|
+| **OAuth 2.0** | 🔒🔒🔒 Highest | Production environments, team access |
+| **API Key** | 🔒🔒 High | Development, personal projects |
+
+**Security Features:**
+- 🔐 **Encrypted Communication**: All data transmitted over TLS 1.3
+- 🔄 **Token Rotation**: Automatic OAuth token refresh
+- 📊 **Audit Logs**: Complete activity tracking
+- 🚫 **Rate Limiting**: Protection against abuse
+- 🛡️ **DDoS Protection**: Enterprise-grade infrastructure
+- 🔍 **Anomaly Detection**: AI-powered security monitoring
 
 ---
 
@@ -471,7 +538,7 @@ Learn how to set up, test, and manage MCP servers and functions using MCP360:
       </a>
       <br><br>
       <a href="https://youtu.be/_ATqVSwubW4?si=KizJaFigHOcWgiag">
-        <img src="https://img.shields.io/badge/▶️_Watch-Complete_Setup_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Tutorial"/>
+        <img src="https://img.shields.io/badge/Watch-Complete_Setup_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Tutorial"/>
       </a>
       <br><br>
       <sub><b>🚀 MCP360 Integration</b></sub>
@@ -485,7 +552,7 @@ Learn how to set up, test, and manage MCP servers and functions using MCP360:
       </a>
       <br><br>
       <a href="https://youtu.be/7y8lzoaI_04?si=kixfcGBro7VN4itl">
-        <img src="https://img.shields.io/badge/▶️_Watch-Advanced_Features-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Advanced Tutorial"/>
+        <img src="https://img.shields.io/badge/Watch-Advanced_Features-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Advanced Tutorial"/>
       </a>
       <br><br>
       <sub><b>⚡ Advanced Capabilities</b></sub>
