@@ -69,6 +69,8 @@
     </td> 
   </tr> 
 </table>
+Restart Claude Desktop and you're ready! 🎊
+
 
 ---
 
@@ -85,7 +87,6 @@
 
 <details open>
 <summary><b>🖥️ Claude Desktop</b> (Click to expand)</summary>
-
 <br>
 
 **Configuration File Locations:**
@@ -93,7 +94,6 @@
 - **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
 
 **Add this configuration:**
-
 ```json
 {
   "mcpServers": {
@@ -114,7 +114,6 @@
 
 <details>
 <summary><b>🎯 Cursor</b></summary>
-
 <br>
 
 1. Open Cursor Settings: `Cmd/Ctrl + Shift + J`
@@ -141,7 +140,6 @@
 
 <details>
 <summary><b>💻 Claude Code</b></summary>
-
 <br>
 
 **Configuration File Locations:**
@@ -149,7 +147,6 @@
 - **Windows:** `%APPDATA%\claude-code\mcp_settings.json`
 
 **Add this configuration:**
-
 ```json
 {
   "mcpServers": {
@@ -170,7 +167,6 @@
 
 <details>
 <summary><b>🌊 Windsurf</b></summary>
-
 <br>
 
 **Configuration File Locations:**
@@ -178,7 +174,6 @@
 - **Windows:** `%APPDATA%\Windsurf\mcp_config.json`
 
 **Add this configuration:**
-
 ```json
 {
   "mcpServers": {
@@ -199,7 +194,6 @@
 
 <details>
 <summary><b>🔧 VS Code (Cline Extension)</b></summary>
-
 <br>
 
 1. Install the [Cline extension](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev)
@@ -221,6 +215,27 @@
 ```
 
 **Reload VS Code** to activate the gateway! 💡
+
+</details>
+
+<details>
+<summary><b>🤖 YourGPT</b></summary>
+<br>
+
+1. Go to your **YourGPT Dashboard**
+2. Select **Functions** from the sidebar
+3. Choose the **MCP Server** option
+4. You'll see two options:
+   - **Browse Marketplace MCP** - Select from pre-configured MCP servers
+   - **Add Custom MCP** - Add your own MCP server configuration
+
+**Use MCP360 in YourGPT:**
+- Select **Add MCP**
+- Enter the server details:
+  - **Name:** `mcp360`
+  - **URL:** `https://connect.mcp360.ai/v1/mcp360/mcp?token=YOUR_API_KEY`
+
+**Save and activate** to start using MCP360 in YourGPT! 🎉
 
 </details>
 
@@ -471,7 +486,7 @@ Learn how to set up, test, and manage MCP servers and functions using MCP360:
       </a>
       <br><br>
       <a href="https://youtu.be/_ATqVSwubW4?si=KizJaFigHOcWgiag">
-        <img src="https://img.shields.io/badge/▶️_Watch-Complete_Setup_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Tutorial"/>
+        <img src="https://img.shields.io/badge/Watch-Complete_Setup_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Tutorial"/>
       </a>
       <br><br>
       <sub><b>🚀 MCP360 Integration</b></sub>
@@ -485,7 +500,7 @@ Learn how to set up, test, and manage MCP servers and functions using MCP360:
       </a>
       <br><br>
       <a href="https://youtu.be/7y8lzoaI_04?si=kixfcGBro7VN4itl">
-        <img src="https://img.shields.io/badge/▶️_Watch-Advanced_Features-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Advanced Tutorial"/>
+        <img src="https://img.shields.io/badge/Watch-Advanced_Features-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Advanced Tutorial"/>
       </a>
       <br><br>
       <sub><b>⚡ Advanced Capabilities</b></sub>
