@@ -223,6 +223,7 @@
 **Reload VS Code** to activate the gateway! 💡
 
 </details>
+
 <details>
 <summary><b>🤖 YourGPT</b></summary>
 <br>
@@ -241,6 +242,78 @@
   - **URL:** `https://connect.mcp360.ai/v1/mcp360/mcp?token=YOUR_API_KEY`
 
 **Save and activate** to start using MCP360 in YourGPT! 🎉
+
+</details>
+
+<details>
+<summary><b>🦀 OpenClaw</b></summary>
+
+<br>
+
+OpenClaw is an open-source, self-hosted agent runtime that treats AI agents as long-lived managed processes with state, health, tooling, and execution boundaries. MCP360 connects to OpenClaw as a unified tool gateway.
+
+**Step 1: Install OpenClaw globally**
+
+```bash
+npm i -g openclaw
+
+openclaw --version
+```
+
+**Step 2: Run initial configuration**
+
+```bash
+openclaw configure
+```
+
+**Step 3: Start the gateway and verify health**
+
+```bash
+openclaw gateway
+
+openclaw gateway status
+
+openclaw doctor
+```
+
+> All health checks must pass before proceeding.
+
+**Step 4: Install MCP tooling for inspection**
+
+```bash
+npm i -g mcporter
+
+mcporter --version
+```
+
+**Step 5: Create a stable MCP configuration directory**
+
+```bash
+mkdir -p ~/mcp
+
+cd ~/mcp
+```
+
+**Step 6: Register MCP360 as an MCP server**
+
+```bash
+mcporter config add mcp360 \
+--command 'npx mcp-remote "https://connect.mcp360.ai/v1/mcp360/mcp?token=YOUR_API_KEY"'
+```
+
+**Step 7: Confirm registration and verify tool access**
+
+```bash
+mcporter config list
+
+mcporter list
+```
+
+If `mcporter list` returns structured tool definitions, your MCP360 connection is working correctly. ✅
+
+> **Tip:** Use `openclaw tui` to run OpenClaw in the terminal instead of the dashboard.
+
+📖 For a full walkthrough, see the [OpenClaw + MCP360 setup guide](https://mcp360.ai/blog/openclaw-agent-runtime-mcp-tool-setup).
 
 </details>
 
@@ -534,28 +607,28 @@ Learn how to set up, test, and manage MCP servers and functions using MCP360:
   <tr>
     <td align="center" width="50%">
       <a href="https://youtu.be/_ATqVSwubW4?si=KizJaFigHOcWgiag">
-        <img src="https://img.youtube.com/vi/_ATqVSwubW4/maxresdefault.jpg" alt="Complete Setup Walkthrough" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"/>
+        <img src="https://img.youtube.com/vi/_ATqVSwubW4/maxresdefault.jpg" alt="MCP360 Integration with N8N" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"/>
       </a>
       <br><br>
       <a href="https://youtu.be/_ATqVSwubW4?si=KizJaFigHOcWgiag">
-        <img src="https://img.shields.io/badge/Watch-Complete_Setup_Tutorial-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Tutorial"/>
+        <img src="https://img.shields.io/badge/Watch-MCP360_Integration_with_N8N-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="MCP360 Integration with N8N"/>
       </a>
       <br><br>
-      <sub><b>🚀 MCP360 Integration</b></sub>
+      <sub><b>🚀 MCP360 Integration with N8N</b></sub>
       <br>
       <sub>Step-by-step installation, configuration, and your first tool execution. Perfect for beginners!</sub>
       <br>
     </td>
     <td align="center" width="50%">
       <a href="https://youtu.be/7y8lzoaI_04?si=kixfcGBro7VN4itl">
-        <img src="https://img.youtube.com/vi/7y8lzoaI_04/maxresdefault.jpg" alt="Advanced Features Deep Dive" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"/>
+        <img src="https://img.youtube.com/vi/7y8lzoaI_04/maxresdefault.jpg" alt="Building Real MCP Workflows" width="100%" style="border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"/>
       </a>
       <br><br>
       <a href="https://youtu.be/7y8lzoaI_04?si=kixfcGBro7VN4itl">
-        <img src="https://img.shields.io/badge/Watch-Advanced_Features-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Advanced Tutorial"/>
+        <img src="https://img.shields.io/badge/Watch-Building_Real_MCP_Workflows-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Building Real MCP Workflows"/>
       </a>
       <br><br>
-      <sub><b>⚡ Advanced Capabilities</b></sub>
+      <sub><b>⚡ Building Real MCP Workflows</b></sub>
       <br>
       <sub>Deep dive into powerful features, custom MCPs, and advanced workflows for power users.</sub>
       <br>
